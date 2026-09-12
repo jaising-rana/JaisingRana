@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JAISING RANA | Photography & Visual Production</title>
-  <!-- Google Fonts: Luxury Serif & Clean Sans -->
+  <title>JAISING RANA | Fashion Design & Visual Production</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -39,7 +38,7 @@
       align-items: center;
       padding: 30px 50px;
       z-index: 50;
-      background: linear-gradient(180deg, rgba(13,14,18,0.8) 0%, transparent 100%);
+      background: linear-gradient(180deg, rgba(13,14,18,0.85) 0%, transparent 100%);
     }
 
     .brand-logo {
@@ -105,9 +104,8 @@
       flex-direction: column;
       justify-content: center;
       padding: 120px 50px 60px 50px;
-      /* Replace banner.jpg with your own uploaded background image */
       background: linear-gradient(90deg, rgba(13,14,18,0.92) 0%, rgba(13,14,18,0.7) 45%, rgba(13,14,18,0.3) 100%), 
-                  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000&auto=format&fit=crop');
+                  url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop');
       background-size: cover;
       background-position: center right;
       border-bottom: 1px solid #1a1c23;
@@ -211,7 +209,7 @@
     .filter-tabs {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 20px;
       margin-top: 30px;
       flex-wrap: wrap;
     }
@@ -233,7 +231,7 @@
       border-bottom: 1px solid #ffffff;
     }
 
-    /* Modern Masonry-Like Layout */
+    /* Grid Layout */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -246,6 +244,7 @@
       overflow: hidden;
       background-color: #141721;
       border-radius: 4px;
+      transition: all 0.4s ease;
     }
 
     .gallery-item img {
@@ -293,7 +292,6 @@
       color: #94a3b8;
     }
 
-    /* Custom sizing like the reference poster */
     .item-1 { grid-column: span 4; height: 500px; }
     .item-2 { grid-column: span 4; height: 500px; }
     .item-3 { grid-column: span 4; height: 500px; }
@@ -301,7 +299,7 @@
     .item-5 { grid-column: span 4; height: 350px; }
     .item-6 { grid-column: span 4; height: 350px; }
 
-    /* --- STORY BEHIND THE LENS (ABOUT ME) --- */
+    /* --- ABOUT SECTION --- */
     .about-section {
       padding: 100px 50px;
       background-color: #090a0d;
@@ -352,6 +350,28 @@
       font-weight: 300;
     }
 
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #22c55e;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+      z-index: 100;
+      transition: transform 0.3s;
+    }
+    .floating-whatsapp:hover {
+      transform: scale(1.05);
+    }
+
     /* --- FOOTER --- */
     footer {
       padding: 50px;
@@ -363,40 +383,16 @@
       text-transform: uppercase;
     }
 
-    /* --- MOBILE RESPONSIVENESS (3 PHONES PREVIEW) --- */
     @media (max-width: 900px) {
-      nav {
-        padding: 20px;
-      }
-      .nav-links, .btn-nav {
-        display: none;
-      }
-      .hero {
-        padding: 100px 25px 50px 25px;
-        background-position: center;
-      }
-      .hero-title {
-        font-size: 3.2rem;
-      }
-      .hero-socials {
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 40px;
-      }
-      .portfolio-section {
-        padding: 60px 20px;
-      }
-      .item-1, .item-2, .item-3, .item-4, .item-5, .item-6 {
-        grid-column: span 12;
-        height: 380px;
-      }
-      .about-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .about-section {
-        padding: 60px 20px;
-      }
+      nav { padding: 20px; }
+      .nav-links, .btn-nav { display: none; }
+      .hero { padding: 100px 25px 50px 25px; }
+      .hero-title { font-size: 3.2rem; }
+      .hero-socials { flex-wrap: wrap; gap: 15px; margin-top: 40px; }
+      .portfolio-section { padding: 60px 20px; }
+      .item-1, .item-2, .item-3, .item-4, .item-5, .item-6 { grid-column: span 12; height: 380px; }
+      .about-container { grid-template-columns: 1fr; gap: 40px; }
+      .about-section { padding: 60px 20px; }
     }
   </style>
 </head>
@@ -406,27 +402,25 @@
   <nav>
     <div class="brand-logo">
       <span class="name">Jaising Rana</span>
-      <span class="sub">Visual & Media Production</span>
+      <span class="sub">Fashion Design & Media Production</span>
     </div>
     
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="https://instagram.com/your_username" target="_blank">Instagram</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <!-- Change phone number to your real WhatsApp number -->
     <a href="https://wa.me/919999999999?text=Hi%20Jaising,%20let's%20work%20together!" target="_blank" class="btn-nav">Let's Work Together</a>
   </nav>
 
   <!-- HERO SECTION -->
   <section class="hero" id="home">
     <div class="hero-content">
-      <p class="hero-tag">Capturing Moments & Aesthetics</p>
-      <h1 class="hero-title">Timeless <br>Visuals</h1>
-      <p class="hero-desc">I am a passionate visual artist creating emotive stories through commercial jewellery shoots, high-end photography, cinematic video editing, and social presence.</p>
+      <p class="hero-tag">Aesthetics & Couture</p>
+      <h1 class="hero-title">Timeless <br>Fashion & Visuals</h1>
+      <p class="hero-desc">I specialize in high-concept fashion design shoots, couture lookbooks, cinematic video production, and contemporary social media branding.</p>
       <a href="#portfolio" class="btn-outline">View Portfolio</a>
     </div>
 
@@ -434,7 +428,6 @@
       <a href="https://instagram.com/your_username" target="_blank">@ Instagram</a>
       <a href="https://wa.me/919999999999" target="_blank">@ WhatsApp</a>
       <a href="tel:+919999999999">@ Direct Call</a>
-      <a href="mailto:contact@jaising.com">@ Email</a>
     </div>
   </section>
 
@@ -445,91 +438,115 @@
       <h2 class="section-heading">Selected Works</h2>
       
       <div class="filter-tabs">
-        <button class="tab-btn active">All</button>
-        <button class="tab-btn">Jewellery</button>
-        <button class="tab-btn">Commercial</button>
-        <button class="tab-btn">Video & Reels</button>
-        <button class="tab-btn">Editing</button>
+        <button class="tab-btn active" onclick="filterGallery('all')">All</button>
+        <button class="tab-btn" onclick="filterGallery('fashion')">Fashion Design</button>
+        <button class="tab-btn" onclick="filterGallery('commercial')">Commercial</button>
+        <button class="tab-btn" onclick="filterGallery('video')">Video & Reels</button>
+        <button class="tab-btn" onclick="filterGallery('editing')">Editing</button>
       </div>
     </div>
 
     <div class="gallery-grid">
-      <!-- Item 1: Jewellery / Editorial -->
-      <div class="gallery-item item-1">
-        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=800&auto=format&fit=crop" alt="Jewellery Shoot">
+      <!-- 1: Fashion Design High-End Couture -->
+      <div class="gallery-item item-1 cat-fashion">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" alt="Fashion Design Shoot">
         <div class="item-overlay">
-          <h4>Diamond & Gold Radiance</h4>
-          <p>Macro Jewellery Photography</p>
+          <h4>Haute Couture Lines</h4>
+          <p>Fashion Design & Lookbook</p>
         </div>
       </div>
 
-      <!-- Item 2: Portrait / Model Shoot -->
-      <div class="gallery-item item-2">
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Portrait Shoot">
+      <!-- 2: Runway / Editorial -->
+      <div class="gallery-item item-2 cat-fashion">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop" alt="Runway Aesthetic">
         <div class="item-overlay">
-          <h4>Vogue & Soul</h4>
-          <p>Studio Portraiture</p>
+          <h4>Vogue Silhouette</h4>
+          <p>Runway & Editorial Design</p>
         </div>
       </div>
 
-      <!-- Item 3: Cinematic Scape -->
-      <div class="gallery-item item-3">
+      <!-- 3: Commercial Shoot -->
+      <div class="gallery-item item-3 cat-commercial">
         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Commercial Shoot">
         <div class="item-overlay">
-          <h4>Golden Horizons</h4>
-          <p>Cinematic Video Direction</p>
+          <h4>Golden Horizon</h4>
+          <p>Brand Commercial Production</p>
         </div>
       </div>
 
-      <!-- Item 4: Mood Video / Street -->
-      <div class="gallery-item item-4">
+      <!-- 4: Video Content -->
+      <div class="gallery-item item-4 cat-video">
         <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=800&auto=format&fit=crop" alt="Reels Content">
         <div class="item-overlay">
-          <h4>Urban Rhythm</h4>
-          <p>Social Media Reels & Edits</p>
+          <h4>Urban Motion</h4>
+          <p>Reels & Social Media Video</p>
         </div>
       </div>
 
-      <!-- Item 5: Wildlife / Nature Art -->
-      <div class="gallery-item item-5">
-        <img src="https://images.unsplash.com/photo-1484406566174-9da000fda645?q=80&w=800&auto=format&fit=crop" alt="Fine Art Shoot">
+      <!-- 5: Retouching / Photo Editing -->
+      <div class="gallery-item item-5 cat-editing">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Editorial Retouching">
         <div class="item-overlay">
-          <h4>The Wild Grace</h4>
-          <p>High-Detail Retouching</p>
+          <h4>Studio Tone & Finish</h4>
+          <p>High-End Color Retouching</p>
         </div>
       </div>
 
-      <!-- Item 6: Sunset / Brand Story -->
-      <div class="gallery-item item-6">
-        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop" alt="Commercial Production">
+      <!-- 6: Fashion Campaign -->
+      <div class="gallery-item item-6 cat-fashion">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop" alt="Fashion Campaign">
         <div class="item-overlay">
-          <h4>Peak Perspective</h4>
-          <p>Commercial Brand Production</p>
+          <h4>Autumn Collection</h4>
+          <p>Fashion Design Campaign</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STORY BEHIND THE LENS (ABOUT SECTION) -->
+  <!-- ABOUT SECTION -->
   <section class="about-section" id="about">
     <div class="about-container">
       <div class="about-img-box">
-        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?q=80&w=1000&auto=format&fit=crop" alt="Jaising Rana Behind The Lens">
+        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?q=80&w=1000&auto=format&fit=crop" alt="Jaising Rana">
       </div>
       <div class="about-content">
         <p class="section-subtitle">About Me</p>
         <h2>Story Behind<br>the Lens</h2>
-        <p>Visual creation is far more than pressing a shutter — it's about crystallizing emotions, framing luxury craftsmanship, and turning ordinary moments into eternal brand narratives.</p>
-        <p>From micro-focus jewellery details to fast-moving viral social reels and comprehensive video post-production, every frame is meticulously crafted with purpose and precision.</p>
+        <p>Fashion design and visual production come together through my lens. From conceptual garment aesthetics to cinematic video edits and high-impact social media assets, I build visuals that define trends.</p>
+        <p>Every silhouette, textile texture, and frame is designed to bring your brand's unique character to life.</p>
         <a href="https://wa.me/919999999999" target="_blank" class="btn-outline">Let's Discuss A Project</a>
       </div>
     </div>
   </section>
 
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/919999999999" target="_blank" class="floating-whatsapp">
+    💬 WhatsApp
+  </a>
+
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 JAISING RANA. ALL RIGHTS RESERVED. CRAFTED FOR HIGH IMPACT.</p>
+    <p>© 2026 JAISING RANA. ALL RIGHTS RESERVED.</p>
   </footer>
+
+  <!-- FILTER SCRIPT -->
+  <script>
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      const tabs = document.querySelectorAll('.tab-btn');
+      
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains('cat-' + category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
